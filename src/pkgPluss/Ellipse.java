@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
@@ -128,7 +128,7 @@ public class Ellipse implements Shape
 
     public String toString()
     {
-        return "Ellipse[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
+        return "pkgPluss.Ellipse[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
     }
 
     public void paintShape(Graphics2D g2)

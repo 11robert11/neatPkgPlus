@@ -1,3 +1,5 @@
+package pkgPluss;
+
 import java.io.*;
 
 /**
@@ -15,7 +17,7 @@ import java.io.*;
  *  <i>Java Methods AB: Data Structures</i>
  *  (Skylight Publishing 2003, ISBN 0-9654853-1-5)
  *
- *  EasyReader provides simple methods for reading the console and
+ *  pkgPluss.EasyReader provides simple methods for reading the console and
  *  for opening and reading text files.  All exceptions are handled
  *  inside the class and are hidden from the user.
  *
@@ -23,11 +25,11 @@ import java.io.*;
  *  Example:
  *  =======
  *
- *  EasyReader console = new EasyReader();
+ *  pkgPluss.EasyReader console = new pkgPluss.EasyReader();
  *  System.out.print("Enter input file name: ");
  *  String fileName = console.readLine();
  *
- *  EasyReader inFile = new EasyReader(fileName);
+ *  pkgPluss.EasyReader inFile = new pkgPluss.EasyReader(fileName);
  *  if (inFile.bad())
  *  {
  *    System.err.println("Can't open " + fileName);

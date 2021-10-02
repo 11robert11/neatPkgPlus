@@ -1,3 +1,5 @@
+package pkgPluss;
+
 public class Car {
 
     public Rectangle getBoundBox() {

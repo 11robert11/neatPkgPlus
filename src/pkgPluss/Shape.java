@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Graphics2D;
 

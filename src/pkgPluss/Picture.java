@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Dimension;
 import java.awt.Graphics2D;
@@ -182,7 +182,7 @@ public class Picture implements Shape
 
     public String toString()
     {
-       return "Picture[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + ",source=" + source + "]";
+       return "pkgPluss.Picture[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + ",source=" + source + "]";
     }
 
     /**

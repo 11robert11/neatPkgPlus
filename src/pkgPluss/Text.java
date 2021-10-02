@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -127,7 +127,7 @@ public class Text implements Shape
         Canvas.getInstance().unshow(this);
     }
 
-    // new method added by Neato to support translating, changing Text Objects
+    // new method added by Neato to support translating, changing pkgPluss.Text Objects
     public void setText(String update)
 	{
 		label.setText(update);
@@ -136,7 +136,7 @@ public class Text implements Shape
 
     public String toString()
     {
-        return "Text[x=" + getX() + ",y=" + getY() + ",message=" + label.getText() + "]";
+        return "pkgPluss.Text[x=" + getX() + ",y=" + getY() + ",message=" + label.getText() + "]";
     }
 
     public void paintShape(Graphics2D g2)

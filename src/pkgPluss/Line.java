@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
@@ -135,7 +135,7 @@ public class Line implements Shape
 
     public String toString()
     {
-        return "Line[x1=" + x1 + ",y1=" + y1 + ",x2=" + x2 + ",y2=" + y2 + "]";
+        return "pkgPluss.Line[x1=" + x1 + ",y1=" + y1 + ",x2=" + x2 + ",y2=" + y2 + "]";
     }
 
     public void paintShape(Graphics2D g2)

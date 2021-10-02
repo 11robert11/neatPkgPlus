@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 //OUT canvas.png
 
 import java.awt.image.BufferedImage;
@@ -69,7 +69,7 @@ public class Canvas
                 maxx = (int) Math.max(maxx, s.getX() + s.getWidth());
                 maxy = (int) Math.max(maxy, s.getY() + s.getHeight());
             }
-			// changed by Neato to make Canvas the same size (600 x 600)
+			// changed by Neato to make pkgPluss.Canvas the same size (600 x 600)
 			return new Dimension(600,600);
             //return new Dimension(maxx + MARGIN, maxy + MARGIN);
         }

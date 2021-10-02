@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 public class Color
 {
@@ -6,7 +6,7 @@ public class Color
     private int green;
     private int blue;
 
-    // Color constants
+    // pkgPluss.Color constants
 
     public static final Color RED = new Color(255, 0, 0);
     public static final Color GREEN = new Color(0, 255, 0);
@@ -23,7 +23,7 @@ public class Color
     public static final Color ORANGE = new Color(255, 200, 0);
     
     /**
-     * Constructs a new Color object.
+     * Constructs a new pkgPluss.Color object.
      * @param red the red value of the color (between 0 and 255)
      * @param green the green value of the color (between 0 and 255)
      * @param blue the blue value of the color (between 0 and 255)

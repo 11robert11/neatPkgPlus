@@ -1,3 +1,5 @@
+package pkgPluss;
+
 public class Emoji
 {
     private double x;
@@ -43,7 +45,7 @@ public class Emoji
     }       
 
     /**
-       Constructs an Emoji.
+       Constructs an pkgPluss.Emoji.
        @param x the leftmost x-coordinate
        @param y the topmost y-coordinate
        @param width the width
@@ -75,7 +77,7 @@ public class Emoji
     }
 
     /**
-       Gets the leftmost x-position of this Emoji.
+       Gets the leftmost x-position of this pkgPluss.Emoji.
        @return the leftmost x-position
     */
     public int getX()
@@ -84,7 +86,7 @@ public class Emoji
     }
 
     /**
-       Gets the topmost y-position of this Emoji.
+       Gets the topmost y-position of this pkgPluss.Emoji.
        @return the topmost y-position
     */
     public int getY()
@@ -93,7 +95,7 @@ public class Emoji
     }
 
     /**
-       Gets the width of this Emoji.
+       Gets the width of this pkgPluss.Emoji.
        @return the width
     */    
     public int getWidth()
@@ -102,7 +104,7 @@ public class Emoji
     }
 
     /**
-       Gets the height of this Emoji.
+       Gets the height of this pkgPluss.Emoji.
        @return the height
     */    
     public int getHeight()
@@ -111,7 +113,7 @@ public class Emoji
     }
 
     /**
-       Moves this Emoji by a given amount.
+       Moves this pkgPluss.Emoji by a given amount.
        @param dx the amount by which to move in x-direction
        @param dy the amount by which to move in y-direction
     */
@@ -130,7 +132,7 @@ public class Emoji
     }
 
     /**
-       Resizes this Emoji both horizontally and vertically.
+       Resizes this pkgPluss.Emoji both horizontally and vertically.
        @param dw the amount by which to resize the width on each side
        @param dw the amount by which to resize the height on each side
     */
@@ -158,7 +160,7 @@ public class Emoji
     }
 
     /**
-       Fills this Emoji.
+       Fills this pkgPluss.Emoji.
     */
     public void fill()
     {

@@ -1,4 +1,4 @@
-//HIDE
+package pkgPluss;//HIDE
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -159,7 +159,7 @@ public class Rectangle implements Shape
 
     public String toString()
     {
-        return "Rectangle[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
+        return "pkgPluss.Rectangle[x=" + getX() + ",y=" + getY() + ",width=" + getWidth() + ",height=" + getHeight() + "]";
     }
 
     public void paintShape(Graphics2D g2)
