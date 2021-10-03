@@ -12,7 +12,6 @@ public class Rectangle implements Shape
     private double y;
     private double width;
     private double height;
-    private Rectangle self = this;
 
     /**
        Constructs an empty rectangle.
@@ -83,11 +82,12 @@ public class Rectangle implements Shape
        @param dx the amount by which to move in x-direction
        @param dy the amount by which to move in y-direction
     */
-    public void translate(double dx, double dy)
+    public Rectangle translate(double dx, double dy)
     {
         x += dx;
         y += dy;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -95,10 +95,11 @@ public class Rectangle implements Shape
      * @param x new x coordinate
      * @param y new y coordinate
      */
-    public void setPos(double x, double y)  {
+    public Rectangle setPos(double x, double y)  {
         this.x = x;
         this.y = y;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -106,13 +107,14 @@ public class Rectangle implements Shape
        @param dw the amount by which to resize the width on each side
        @param dw the amount by which to resize the height on each side
     */
-    public void grow(double dw, double dh)
+    public Rectangle grow(double dw, double dh)
     {
         width += 2 * dw;
         height += 2 * dh;
         x -= dw;
         y -= dh;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -124,18 +126,17 @@ public class Rectangle implements Shape
     {
         color = newColor;
         Canvas.getInstance().repaint();
-        return this.self;
+        return this;
     }
 
     /**
        Draws this rectangle.
-     * @return
+     * @return this
      */
     public Rectangle draw()
     {
-        filled = false;
         Canvas.getInstance().show(this);
-        return this.self;
+        return this;
     }
 
     /**
@@ -145,7 +146,13 @@ public class Rectangle implements Shape
     {
         filled = true;
         Canvas.getInstance().show(this);
-        return self;
+        return this;
+    }
+
+    public Rectangle unfill()   {
+        filled = false;
+        Canvas.getInstance().show(this);
+        return this;
     }
 
     /**

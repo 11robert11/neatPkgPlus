@@ -67,13 +67,14 @@ public class Line implements Shape
      * @param dx the amount by which to move in x-direction
      * @param dy the amount by which to move in y-direction
      */
-    public void translate(double dx, double dy)
+    public Line translate(double dx, double dy)
     {
         x1 += dx;
         y1 += dy;
         x2 += dx;
         y2 += dy;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -81,7 +82,7 @@ public class Line implements Shape
      * @param dw the amount by which to resize the width on each side
      * @param dw the amount by which to resize the height on each side
      */
-    public void grow(double dw, double dh)
+    public Line grow(double dw, double dh)
     {
         if (x1 <= x2)
         {
@@ -105,32 +106,36 @@ public class Line implements Shape
         }
 
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Sets the color for drawing this line.
      * @param newColor the new color
      */
-    public void setColor(Color newColor)
+    public Line setColor(Color newColor)
     {
         color = newColor;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Shows this line on the canvas.
      */
-    public void draw()
+    public Line draw()
     {
         Canvas.getInstance().show(this);
+        return this;
     }
 
     /**
         Undraws this line.
     */
-    public void undraw()
+    public Line undraw()
     {
         Canvas.getInstance().unshow(this);
+        return this;
     }
 
     public String toString()

@@ -9,11 +9,12 @@ import javax.swing.JLabel;
 public class Text implements Shape
 {
     private Color color = Color.BLACK;
-    private JLabel label = new JLabel();
+    private final JLabel label = new JLabel();
     private double x;
     private double y;
     private double xGrow;
     private double yGrow;
+    private Text self;
 
     /**
      * Constructs a text at a given location.
@@ -71,11 +72,12 @@ public class Text implements Shape
      * @param dx the amount by which to move in x-direction
      * @param dy the amount by which to move in y-direction
      */
-    public void translate(double dx, double dy)
+    public Text translate(double dx, double dy)
     {
         x += dx;
         y += dy;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -83,10 +85,11 @@ public class Text implements Shape
      * @param x new x coordinate
      * @param y new y coordinate
      */
-    public void setPos(double x, double y)  {
+    public Text setPos(double x, double y)  {
         this.x = x;
         this.y = y;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -94,44 +97,49 @@ public class Text implements Shape
      * @param dw the amount by which to resize the width on each side
      * @param dw the amount by which to resize the height on each side
      */
-    public void grow(double dw, double dh)
+    public Text grow(double dw, double dh)
     {
         xGrow += dw;
         yGrow += dh;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Sets the color for drawing this text.
      * @param newColor the new color
      */
-    public void setColor(Color newColor)
+    public Text setColor(Color newColor)
     {
         color = newColor;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Shows this text on the canvas.
      */
-    public void draw()
+    public Text draw()
     {
         Canvas.getInstance().show(this);
+        return this;
     }
 
     /**
         Undraws this text.
     */
-    public void undraw()
+    public Text undraw()
     {
         Canvas.getInstance().unshow(this);
+        return this;
     }
 
     // new method added by Neato to support translating, changing pkgPluss.Text Objects
-    public void setText(String update)
+    public Text setText(String update)
 	{
 		label.setText(update);
 		Canvas.getInstance().repaint();
+        return this;
 	}
 
     public String toString()

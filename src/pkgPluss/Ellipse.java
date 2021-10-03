@@ -69,11 +69,12 @@ public class Ellipse implements Shape
      * @param dx the amount by which to move in x-direction
      * @param dy the amount by which to move in y-direction
      */
-    public void translate(double dx, double dy)
+    public Ellipse translate(double dx, double dy)
     {
         x += dx;
         y += dy;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -81,49 +82,54 @@ public class Ellipse implements Shape
      * @param dw the amount by which to resize the width on each side
      * @param dw the amount by which to resize the height on each side
      */
-    public void grow(double dw, double dh)
+    public Ellipse grow(double dw, double dh)
     {
         width += 2 * dw;
         height += 2 * dh;
         x -= dw;
         y -= dh;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Sets the color of this ellipse.
      * @param newColor the new color
      */
-    public void setColor(Color newColor)
+    public Ellipse setColor(Color newColor)
     {
         color = newColor;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Draws this ellipse.
      */
-    public void draw()
+    public Ellipse draw()
     {
         filled = false;
         Canvas.getInstance().show(this);
+        return this;
     }
 
     /**
      * Fills this ellipse.
      */
-    public void fill()
+    public Ellipse fill()
     {
         filled = true;
         Canvas.getInstance().show(this);
+        return this;
     }
 
     /**
         Undraws this ellipse.
     */
-    public void undraw()
+    public Ellipse undraw()
     {
         Canvas.getInstance().unshow(this);
+        return this;
     }
 
     public String toString()

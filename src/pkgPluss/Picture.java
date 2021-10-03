@@ -57,7 +57,7 @@ public class Picture implements Shape
      *
      * @param source the filename or URL
      */
-    public void load(String source)
+    public Picture load(String source)
     {
         try
         {
@@ -77,6 +77,7 @@ public class Picture implements Shape
             ex.printStackTrace();
         }
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -207,7 +208,7 @@ public class Picture implements Shape
      * @param i the pixel index
      * @param color the new color for the pixel
      */
-    public void setColorAt(int i, Color color)
+    public Picture setColorAt(int i, Color color)
     {
         if (image == null || i < 0 || i >= pixels())
         {
@@ -217,6 +218,7 @@ public class Picture implements Shape
         {
             setColorAt(i % image.getWidth(), i / image.getWidth(), color);
         }
+        return this;
     }
 
     /**
@@ -244,7 +246,7 @@ public class Picture implements Shape
      * @param y the y-coordinate (row) of the pixel
      * @param color the color of the pixel at the given row and column
      */
-    public void setColorAt(int x, int y, Color color)
+    public Picture setColorAt(int x, int y, Color color)
     {
         if (image == null || x < 0 || x >= image.getWidth() || y < 0 || y >= image.getHeight())
         {
@@ -255,6 +257,7 @@ public class Picture implements Shape
             image.setRGB(x, y, ((int) color.getRed()) * 65536 + ((int) color.getGreen()) * 256 + (int) color.getBlue());
             Canvas.getInstance().repaint();
         }
+        return this;
     }
 
     /**
@@ -262,11 +265,12 @@ public class Picture implements Shape
      * @param dx the amount by which to move in x-direction
      * @param dy the amount by which to move in y-direction
      */
-    public void translate(double dx, double dy)
+    public Picture translate(double dx, double dy)
     {
         x += dx;
         y += dy;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -274,10 +278,11 @@ public class Picture implements Shape
      * @param x new x coordinate
      * @param y new y coordinate
      */
-    public void setPos(double x, double y)  {
+    public Picture setPos(double x, double y)  {
         this.x = x;
         this.y = y;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
@@ -285,27 +290,30 @@ public class Picture implements Shape
      * @param dw the amount by which to resize the width on each side
      * @param dw the amount by which to resize the height on each side
      */
-    public void grow(double dw, double dh)
+    public Picture grow(double dw, double dh)
     {
         xGrow += dw;
         yGrow += dh;
         Canvas.getInstance().repaint();
+        return this;
     }
 
     /**
      * Shows this picture on the canvas.
      */
-    public void draw()
+    public Picture draw()
     {
         Canvas.getInstance().show(this);
+        return this;
     }
 	
 	/**
 	Undraws this picture.
 	*/
-	public void undraw()
+	public Picture undraw()
 	{
 		Canvas.getInstance().unshow(this);
+        return this;
 	}
 
     /**
